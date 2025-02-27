@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script type="module" src="../assets/script/templates.js"></script>
+    <script src="../assets/script/slideshow.js"></script>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link rel="stylesheet" href="../assets/style/slideshow.css">
+</head>
+
+<body>
+    <nav-template></nav-template>  
+    <!-- Image slideshow. If this were real, I'd recommend updating this
+    with the latest work regularly. -->
+    <div class="slideshowContainer">
+        <div class = "Slide fade">
+            <img src="../assets/images/05.jpg" alt="" style="width: 100%">
+        </div>
+        <div class = "Slide fade">
+            <img src="../assets/images/05.jpg" alt="" style="width: 100%">
+        </div>
+        <div class = "Slide fade">
+            <img src="../assets/images/05.jpg" alt="" style="width: 100%">
+        </div>
+    </div>
+    <br>
+    <div style = "text-align: center;">
+        <!--changes the slides to the image corresponding to that number.-->
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- this is the sample text for the home page. -->
+    <p>
+        Welcome to Aurum Landscapes, the premier luxury landscaping firm in the Cotswolds, specializing in bespoke garden design and estate transformations. We create breathtaking outdoor spaces that blend elegance, innovation, and craftsmanship to complement the finest country homes.
+        With a meticulous approach and a passion for perfection, our team of expert landscape designers, horticulturists, and artisans work exclusively on projects starting from £100,000. Our mission is to craft timeless landscapes that enhance the beauty of your home while reflecting your vision and lifestyle.
+        From sweeping, manicured gardens to architecturally inspired outdoor living spaces, we curate landscapes that stand as works of art. Whether restoring a historic garden or designing an entirely new outdoor sanctuary, we tailor every detail to suit your estate’s character.
+        At Aurum Landscapes, luxury means exclusivity, attention to detail, and an unwavering commitment to excellence. We take on a select number of projects each year to ensure every client receives our undivided attention.
+        Begin your journey to a truly remarkable garden. Contact us today to discuss your vision. 
+    </p>
+
+</body>
+</html>
