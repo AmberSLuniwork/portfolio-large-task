@@ -1,9 +1,132 @@
-* {box-sizing: border-box}
-
-/*nav*/
-nav{
-    background-color: #2C4339;
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: #F6F3DE;
+    overflow-x: hidden;
 }
 
-/*text*/
+/*header*/
+header{
+    background-color: #2C4339;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 5%;
+    z-index: 10;
+}
+p.logo{
+    color: #F6F3DE;
+    font-size: large;
+    font-size: 28px;
+    display: flex;
+}
+/*Nav*/
+nav{
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+nav ul li{
+    display: inline;
+}
+/*mobile / small screen menu */
+.menu-toggle {
+    display: none;
+    font-size: 40px;
+    color: #AECC94;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 950px) {
+    .nav-list {
+        font-size: larger;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        background-color: #2C4339;
+        position: absolute;
+        top: 11%; 
+        right: -100%; /* Initially hide off the screen */
+        width: 300px;  /* Set the width of the sliding menu */
+        height: 100%;
+        text-align: center;
+        transition: right 0.3s ease; /* Add transition for smooth sliding */
+        overflow-x: hidden;
+    }
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+.nav-list.active {
+    display: flex;
+    right: 0;
+    
+}
+/*articles*/
+article{
+    padding: 20px 5%;
+}
+/*footer specific stylin and forms*/
+footer{
+    justify-content: space-between;
+    display: block;
+    padding: 20px;
+    background-color: #2C4339;
+}
+form{
+    font-family: 'Roboto','Arial';
+    color: #AECC94;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap:8px;
+    max-width: 33%;
+    align-items: center;
+}
+form button {
+    grid-column: span 2;
+    background-color: #AECC94;
+    font-weight: bold;
+    color: #2C4339;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+form .formnote{
+    color: #AECC94;
+    font-style: italic;
+    grid-column: span 2;
+}
+/*text - adding web safe fonts for accessibility */
+
+h1, h2, h3, h4, h5, p.logo{
+    font-family: 'Lora','Garamond';
+}
+
+p, a{
+    font-family: 'Roboto','Arial';
+    color: #2C4339;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: #AECC94;
+}
+nav ul button a{
+    color: #2C4339;
+    text-decoration: none;
+}
 

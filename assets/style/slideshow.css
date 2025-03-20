@@ -1,47 +1,21 @@
 /*this is for the slideshow on the home page. I've put it in a separate 
 script so not all the pages have to load unused code.*/
 
-/*so the first image is always loaded.*/
-.Slide:first-child{
-    display: block;
-}
-.slideshowContainer{
+.slideshowContainer {
+    position: relative; /* Necessary for stacking slides */
     max-width: 100%;
-    position: relative;
-    margin: auto;
+    aspect-ratio: 20/9;
+    margin-bottom: 20px;
 }
-.Slide{
-    display: none;
-}
-/* Caption text if needed.*/
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
+
+.Slide {
+    position: absolute; /* Stack slides on top of each other */
     width: 100%;
-    text-align: center;
+    opacity: 0; /* Initially hide all slides */
+    transition: opacity 1.5s ease-in-out; /* Smooth fade transition */
 }
-  /* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}  
-.active, .dot:hover {
-    background-color: #717171;
-}
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}  
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+
+.Slide.active {
+    opacity: 1; /* Only show the active slide */
+    z-index: 1; /* Ensure active slide is on top */
 }
