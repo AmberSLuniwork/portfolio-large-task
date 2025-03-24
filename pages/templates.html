@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <p class="logo">Company Name</p>
+        <a class="logo" href="index.html">Company Name</p>
         <nav>
             <button class="menu-toggle" id="hamburger">&#9776;</button>
             <ul class="nav-list">
@@ -42,27 +42,32 @@
     <!--This is the footer.-->
     <footer>
         <section class="links">
-            links should be put here!
+            <ul class="footer-nav">
+                <li>
+                    <a href=index.html>Home</a>
+                </li>
+                <li>
+                    <a href=about.html>About Us</a>
+                </li>
+                <li>
+                    <a href=services.html>Services</a>
+                </li>
+                <li>
+                    <a href=portfolio.html>Portfolio</a>
+                </li>
+                <li>
+                    <a href=our-process.html>Our Process</a>
+                </li>
+                <li>
+                    <a href=blog.html>Our Insights</a>
+                </li>
+                <li>
+                    <a href=contact.html>Contact Us</a>
+                </li>
+            </ul>
         </section>
-        <section class="formcontainer">
-            
-            <form id="contactform">
-                <p class="formnote">Ready to start the journey to your own bespoke garden? Send us a message.</p>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-            
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-                <p class="formnote">Please note that due to the nature of our work we only take on projects starting from £100,000.</p>
-            </form>  
-        </section>
+        <!--I noticed a lot of footers contain awards or certifications. I've added a section for it.-->
+        <section class="awards"></section>
     </footer>
 </body>
 </html>

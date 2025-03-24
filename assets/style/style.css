@@ -15,11 +15,12 @@ header{
     padding: 25px 5%;
     z-index: 10;
 }
-p.logo{
+.logo{
     color: #F6F3DE;
     font-size: large;
     font-size: 28px;
     display: flex;
+    text-decoration: none;
 }
 /*Nav*/
 nav{
@@ -79,13 +80,22 @@ nav ul li{
 article{
     padding: 20px 5%;
 }
-/*footer specific stylin and forms*/
+/*footer specific stylin*/
 footer{
     justify-content: space-between;
     display: block;
     padding: 20px;
     background-color: #2C4339;
 }
+.footer-nav, .footer-nav li a{
+    list-style-type: none;
+    color: #AECC94;
+    text-decoration: none;
+}
+.footer-nav li a:hover{
+    color: #F6F3DE;
+}
+/*form*/
 form{
     font-family: 'Roboto','Arial';
     color: #AECC94;
@@ -112,7 +122,7 @@ form .formnote{
 }
 /*text - adding web safe fonts for accessibility */
 
-h1, h2, h3, h4, h5, p.logo{
+h1, h2, h3, h4, h5, .logo{
     font-family: 'Lora','Garamond';
 }
 
@@ -121,7 +131,7 @@ p, a{
     color: #2C4339;
 }
 
-nav ul a{
+nav ul a, .footer-nav{
     text-decoration: none;
     color: #AECC94;
 }
