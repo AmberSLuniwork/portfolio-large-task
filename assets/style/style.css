@@ -5,6 +5,9 @@
 body{
     background-color: #F6F3DE;
     overflow-x: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 /*header*/
 header{
@@ -70,15 +73,11 @@ nav ul li{
     .menu-toggle {
         display: block;
     }
+}
+@media screen and (max-width:1300px) {
     /*stacks the column elements on smaller screens.*/
     .twocolumn {
-        flex-direction: column;
-    }
-    .left, .right {
-        max-width: 100%;
-    }
-    .twothirds,.onethird{
-        width: 100%;
+        flex-direction: column-reverse;
     }
 }
 .nav-list.active {
@@ -89,32 +88,18 @@ nav ul li{
 /*content containers - mains, sections, articles*/
 main{
     display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
     row-gap: 2rem;
     padding: 20px 5%;
     min-height: 100%;
 }
 .twocolumn{
-    display: flex;
+    display:flex;
+    gap: 2rem;
     justify-content: space-between;
 }
-section.left, section.right{
-    vertical-align: top;
-    display: inline-block;
-    flex: 1;
-    max-width: 50%;
-}
-.left{
-    display: flex;
-}
-.right{
-    display: flex;
-}
-section.twothirds{
-    max-width: 75%;
-}
-section.onethird{
-    max-width: 25%;
-}
+
 /*form*/
 form{
     font-family: 'Roboto','Arial';
@@ -158,6 +143,9 @@ h1, h2, h3, h4, h5, .logo{
     font-family: 'Lora','Garamond';
     color: #2C4339;
 }
+h1, h2, h3, h4, h5 {
+    padding-bottom: 1rem;
+}
 p, a, ul{
     font-family: 'Roboto','Arial';
     color: #2C4339;
@@ -175,3 +163,9 @@ nav ul button a{
     text-decoration: none;
 }
 
+/*image resizing*/
+#aboutusimage{
+    object-position: right;
+    max-width: 100%;
+    height: auto;
+}
