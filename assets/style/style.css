@@ -6,7 +6,6 @@ body{
     background-color: #F6F3DE;
     overflow-x: hidden;
 }
-
 /*header*/
 header{
     background-color: #2C4339;
@@ -15,8 +14,9 @@ header{
     padding: 25px 5%;
     z-index: 10;
 }
-.logo{
+a.logo{
     color: #F6F3DE;
+    font-weight: bolder;
     font-size: large;
     font-size: 28px;
     display: flex;
@@ -48,6 +48,7 @@ nav ul li{
     cursor: pointer;
 }
 @media screen and (max-width: 950px) {
+    /*Menu toggle.*/
     .nav-list {
         font-size: larger;
         z-index: 5;
@@ -56,19 +57,28 @@ nav ul li{
         background-color: #2C4339;
         position: absolute;
         top: 11%; 
-        right: -100%; /* Initially hide off the screen */
-        width: 300px;  /* Set the width of the sliding menu */
+        right: -100%; /* Initially offscreen */
+        width: 300px;  /*width of the sliding menu */
         height: 100%;
         text-align: center;
-        transition: right 0.3s ease; /* Add transition for smooth sliding */
+        transition: right 0.3s ease; /* transition for smooth sliding */
         overflow-x: hidden;
     }
     .nav-list li {
         margin: 10px 0;
     }
-
     .menu-toggle {
         display: block;
+    }
+    /*stacks the column elements on smaller screens.*/
+    .twocolumn {
+        flex-direction: column;
+    }
+    .left, .right {
+        max-width: 100%;
+    }
+    .twothirds,.onethird{
+        width: 100%;
     }
 }
 .nav-list.active {
@@ -76,9 +86,56 @@ nav ul li{
     right: 0;
     
 }
-/*articles*/
-article{
+/*content containers - mains, sections, articles*/
+main{
+    display: grid;
+    row-gap: 2rem;
     padding: 20px 5%;
+    min-height: 100%;
+}
+.twocolumn{
+    display: flex;
+    justify-content: space-between;
+}
+section.left, section.right{
+    vertical-align: top;
+    display: inline-block;
+    flex: 1;
+    max-width: 50%;
+}
+.left{
+    display: flex;
+}
+.right{
+    display: flex;
+}
+section.twothirds{
+    max-width: 75%;
+}
+section.onethird{
+    max-width: 25%;
+}
+/*form*/
+form{
+    font-family: 'Roboto','Arial';
+    color: #2C4339;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap:8px;
+    align-items: center;
+}
+#contactform{
+    max-width: 500px;
+    margin: 0 auto;
+}
+form button {
+    grid-column: span 2;
+    background-color: #AECC94;
+    font-weight: bold;
+    color: #2C4339;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
 }
 /*footer specific stylin*/
 footer{
@@ -95,38 +152,13 @@ footer{
 .footer-nav li a:hover{
     color: #F6F3DE;
 }
-/*form*/
-form{
-    font-family: 'Roboto','Arial';
-    color: #AECC94;
-    font-size: 14px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap:8px;
-    max-width: 33%;
-    align-items: center;
-}
-form button {
-    grid-column: span 2;
-    background-color: #AECC94;
-    font-weight: bold;
-    color: #2C4339;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-}
-form .formnote{
-    color: #AECC94;
-    font-style: italic;
-    grid-column: span 2;
-}
 /*text - adding web safe fonts for accessibility */
 
 h1, h2, h3, h4, h5, .logo{
     font-family: 'Lora','Garamond';
+    color: #2C4339;
 }
-
-p, a{
+p, a, ul{
     font-family: 'Roboto','Arial';
     color: #2C4339;
 }
@@ -134,6 +166,9 @@ p, a{
 nav ul a, .footer-nav{
     text-decoration: none;
     color: #AECC94;
+}
+.nodeco li{
+    list-style-type: none;
 }
 nav ul button a{
     color: #2C4339;
