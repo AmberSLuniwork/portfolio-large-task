@@ -41,6 +41,11 @@ nav ul{
 nav ul li{
     display: inline;
 }
+nav ul li a:hover{
+    font-weight: bolder;
+    color: #F6F3DE;
+    transition: 0.25s ease;
+}
 /*mobile / small screen menu */
 .menu-toggle {
     display: none;
@@ -99,6 +104,36 @@ main{
     gap: 2rem;
     justify-content: space-between;
 }
+/*for tiles. These will be used in portfolio and blog page.*/
+.tiles{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+.tilepost{
+    display: grid;
+    grid-template-areas:
+    "image"
+    "header"
+    "text";
+    text-align: center;
+}
+.tilepost h3 {
+    padding-top: 10px;
+    grid-area: header;
+}
+
+.tilepost img {
+    grid-area: image;
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.tilepost p {
+    grid-area: text;
+    font-style: italic;
+}
 
 /*form*/
 form{
@@ -113,6 +148,20 @@ form{
     max-width: 500px;
     margin: 0 auto;
 }
+/*buttons*/
+.showmore{
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2C4339;
+    font-weight: bold;
+    color: #AECC94;
+}
+.showmore:hover{
+    background-color: #192c23;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
 form button {
     grid-column: span 2;
     background-color: #AECC94;
@@ -121,12 +170,13 @@ form button {
     border: none;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 /*footer specific stylin*/
 footer{
     justify-content: space-between;
-    display: block;
-    padding: 20px;
+    display: flex;
+    padding: 25px 5%;
     background-color: #2C4339;
 }
 .footer-nav, .footer-nav li a{
@@ -161,6 +211,9 @@ nav ul a, .footer-nav{
 nav ul button a{
     color: #2C4339;
     text-decoration: none;
+}
+.centre{
+    text-align: center;
 }
 
 /*image resizing*/

@@ -8,3 +8,9 @@ document.addEventListener('click', function (event) {
         toggleMenu();
     }
 });
+
+document.addEventListener('click', function(event) {
+    if (event.target && event.target.classList.contains('showmore')) {
+        alert("No articles to show!");
+    }
+});
