@@ -65,6 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
         <section class="links">
             <ul class="footer-nav">
                 <li>
+                    <p>Made by Amber Sudworth © 2025.</p> <br>
+                </li>
+                <li>
                     <a href="#">See how I made this</a>
                 </li>
                 <li>

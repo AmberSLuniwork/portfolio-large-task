@@ -84,6 +84,9 @@ nav ul li a:hover{
     .twocolumn {
         flex-direction: column-reverse;
     }
+    .textimage{
+        flex-direction: column;
+    }
 }
 .nav-list.active {
     display: flex;
@@ -103,6 +106,15 @@ main{
     display:flex;
     gap: 2rem;
     justify-content: space-between;
+}
+article.textimage{
+    display:flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.textimage img{
+    width: 100%;
+    height: auto;
 }
 /*for tiles. These will be used in portfolio and blog page.*/
 .tiles{
@@ -129,12 +141,15 @@ main{
     height: auto;
     margin: 0 auto;
 }
+.tilepost img:hover{
+    width: 420px;
+    transition: 0.3s ease;
+}
 
 .tilepost p {
     grid-area: text;
     font-style: italic;
 }
-
 /*form*/
 form{
     font-family: 'Roboto','Arial';
@@ -194,14 +209,14 @@ h1, h2, h3, h4, h5, .logo{
     color: #2C4339;
 }
 h1, h2, h3, h4, h5 {
-    padding-bottom: 1rem;
+    padding: 1rem 1rem 1rem 0;
 }
 p, a, ul{
     font-family: 'Roboto','Arial';
     color: #2C4339;
 }
 
-nav ul a, .footer-nav{
+nav ul a, .footer-nav, .footer-nav p{
     text-decoration: none;
     color: #AECC94;
 }
@@ -214,6 +229,12 @@ nav ul button a{
 }
 .centre{
     text-align: center;
+}
+.quote{
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    font-size: 2rem;
 }
 
 /*image resizing*/
