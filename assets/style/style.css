@@ -112,8 +112,9 @@ article.textimage{
 /*for tiles. These will be used in portfolio and blog page.*/
 .tiles{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 25px;
 }
 .tilepost{
     display: grid;
@@ -123,17 +124,29 @@ article.textimage{
     "text";
     text-align: center;
 }
-.headliner{
+.featured{
     grid-column: span 2;
+    grid-row: span 2;
+}
+.featured img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.headliner{
+    grid-column: span 3;
 }
 .tilepost h3 {
     padding-top: 10px;
     grid-area: header;
 }
 
-.tilepost img {
+.tilepost img:not(.featured img) {
     grid-area: image;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     margin: 0 auto;
 }
@@ -156,6 +169,10 @@ article.textimage{
     }
     .textimage img{
         max-width: 100%;
+    }
+    .featured{
+        grid-column:span 1;
+        grid-row: span 1;
     }
 }
 /*form*/

@@ -2,7 +2,7 @@
 
 //nav
 document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector("header"); // Selects the existing <nav> element
+    const header = document.querySelector("header"); // Selects the existing <header> element
     if (header) {
         header.innerHTML = `
         <a class="logo" href="index.html">Aurum <br> Landscapes</p></a>

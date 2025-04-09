@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Add "active" class to the current slide
         slides[slideIndex].classList.add("active");
 
-        setTimeout(showSlides, 8000); // Change slide every 8 seconds
+        setTimeout(showSlides, 5000); // Change slide every 8 seconds
     }
 
     // Ensure the first image is visible on page load
